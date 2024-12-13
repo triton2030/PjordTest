@@ -24,20 +24,19 @@ const Chip: FunctionComponent<ChipType> = ({
 }) => {
   return (
     <div
-      className={`rounded-big-blocks bg-ui-accent-surface overflow-hidden flex flex-row items-center justify-between p-xxs text-left text-xs text-ui-txt-primary font-medium-base data-[accent='false']:data-[size='Big']:bg-ui-primary-border data-[accent='false']:data-[size='Big']:border-ui-primary-border data-[accent='false']:data-[size='Big']:border-[2px] data-[accent='false']:data-[size='Big']:border-solid [&_.chip]:data-[accent='false']:data-[size='Big']:text-base [&_.chip]:data-[accent='false']:data-[size='Big']:leading-[24px] [&_.x]:data-[accent='false']:data-[size='Big']:bg-ui-primary-surface [&_.x]:data-[accent='false']:data-[size='Big']:h-[unset] [&_.x]:data-[accent='false']:data-[size='Big']:[box-sizing:unset] ${className}`}
+      className={`rounded-big-blocks bg-surfaceaccent overflow-hidden flex flex-row items-center justify-end p-xxs text-left text-[0.75rem] text-text font-medium-base data-[accent='false']:data-[size='Big']:bg-border data-[accent='false']:data-[size='Big']:p-xxs data-[accent='false']:data-[size='Big']:border-border data-[accent='false']:data-[size='Big']:border-[2px] data-[accent='false']:data-[size='Big']:border-solid [&_.chip-wrapper]:data-[accent='false']:data-[size='Big']:py-xxs [&_.chip-wrapper]:data-[accent='false']:data-[size='Big']:px-xxs [&_.chip]:data-[accent='false']:data-[size='Big']:text-[1rem] [&_.chip]:data-[accent='false']:data-[size='Big']:leading-[1.5rem] [&_.x]:data-[accent='false']:data-[size='Big']:bg-surface [&_.x]:data-[accent='false']:data-[size='Big']:h-[2rem] [&_.x]:data-[accent='false']:data-[size='Big']:py-xxs [&_.x]:data-[accent='false']:data-[size='Big']:px-xxs ${className}`}
       data-accent={accent}
       data-size={size}
     >
-      <div className="flex flex-row items-center justify-start py-0 px-2">
-        <div className="chip relative leading-[16px] font-medium">{name1}</div>
+      <div className="chip-wrapper flex flex-row items-center justify-start py-[0rem] px-[0.5rem]">
+        <div className="chip relative leading-[1rem] font-medium">{name1}</div>
       </div>
-      <div className="x rounded-big-blocks bg-ui-empty-surface h-6 overflow-hidden flex flex-row items-center justify-center py-0 px-1 box-border">
+      <div className="x rounded-big-blocks bg-surfaceinput h-[1.5rem] overflow-hidden flex flex-row items-center justify-center py-[0rem] px-[0.25rem] box-border">
         <IconsText
           size="xs"
           type="Primary"
           text={text}
-          stringText="IconsText"
-          editorChoice="/editor-choice.svg"
+          stringText="the mega"
           iconLeft={iconLeft}
           iconRight={iconRight}
         />

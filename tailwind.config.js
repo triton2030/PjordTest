@@ -4,17 +4,14 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "ui-primary-surface": "#140935",
-        "ui-primary-border": "#190f41",
-        "ui-txt-primary": "#d9ddff",
-        "ui-accent-surface": "#3e29a2",
-        "ui-empty-surface": "#2c1a7f",
-        "ui-btn-primary-stroke": "#281e5a",
-        "ui-txt-secondary": "#8993f8",
-        "ui-btn-secondary-tokenselection": "#6774f6",
+        surface: "#140935",
+        border: "#190f41",
+        text: "#d9ddff",
+        surfaceaccent: "#3e29a2",
+        surfaceinput: "rgba(0, 0, 0, 0.2)",
       },
       spacing: {
-        iconsize: "16px",
+        iconsize: "24px",
         xxs: "2px",
       },
       fontFamily: {
@@ -26,10 +23,8 @@ module.exports = {
       },
     },
     fontSize: {
-      base: "16px",
-      xs: "12px",
-      sm: "14px",
-      lg: "18px",
+      base: "1rem",
+      xs: "0.75rem",
       inherit: "inherit",
     },
   },

@@ -4,7 +4,6 @@ export type IconsTextType = {
   className?: string;
   text?: boolean;
   stringText?: string;
-  editorChoice?: string;
   iconLeft?: boolean;
   iconRight?: boolean;
 
@@ -19,33 +18,32 @@ const IconsText: FunctionComponent<IconsTextType> = ({
   type = "Primary",
   text = true,
   stringText = "IconsText",
-  editorChoice,
   iconLeft = true,
   iconRight = true,
 }) => {
   return (
     <div
-      className={`flex flex-row items-center justify-center gap-1 text-left text-xs text-ui-txt-primary font-medium-base [&_.iconstext]:data-[size='base']:data-[type='Primary']:text-base [&_.iconstext]:data-[size='base']:data-[type='Primary']:leading-[24px] [&_.editor-choice-icon]:data-[size='base']:data-[type='Primary']:w-6 [&_.editor-choice-icon]:data-[size='base']:data-[type='Primary']:h-6 ${className}`}
+      className={`flex flex-row items-center justify-center gap-[0.25rem] text-left text-[0.75rem] text-text font-medium-base [&_.base-logo-in-blue-2-icon]:data-[size='base']:data-[type='Primary']:w-[1.5rem] [&_.base-logo-in-blue-2-icon]:data-[size='base']:data-[type='Primary']:h-[1.5rem] [&_.iconstext]:data-[size='base']:data-[type='Primary']:text-[1rem] [&_.iconstext]:data-[size='base']:data-[type='Primary']:leading-[1.5rem] [&_.staking-icon]:data-[size='base']:data-[type='Primary']:w-[1.5rem] [&_.staking-icon]:data-[size='base']:data-[type='Primary']:h-[1.5rem] [&_.staking-icon]:data-[size='base']:data-[type='Primary']:[overflow:unset] [&_.staking-icon]:data-[size='base']:data-[type='Primary']:[flex-shrink:unset] ${className}`}
       data-size={size}
       data-type={type}
     >
       {iconLeft && (
         <img
-          className="w-iconsize relative h-iconsize"
+          className="base-logo-in-blue-2-icon w-iconsize relative h-iconsize"
           alt=""
           src="/baselogoinblue-2.svg"
         />
       )}
       {text && (
-        <div className="iconstext relative leading-[16px] font-medium">
+        <div className="iconstext relative leading-[1rem] font-medium">
           {stringText}
         </div>
       )}
       {iconRight && (
         <img
-          className="editor-choice-icon w-4 relative h-4"
+          className="staking-icon w-iconsize relative h-iconsize overflow-hidden shrink-0"
           alt=""
-          src={editorChoice}
+          src="/staking.svg"
         />
       )}
     </div>
