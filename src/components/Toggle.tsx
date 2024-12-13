@@ -18,7 +18,7 @@ const Toggle: FunctionComponent<ToggleType> = ({
 }) => {
   return (
     <div
-      className={`rounded-13xl bg-ui-primary-surface border-ui-btn-primary-stroke border-[2px] border-solid flex flex-row items-center justify-center p-1 gap-2 data-[property1='Variant2']:rounded-2xl data-[property1='Variant2']:flex-col ${className}`}
+      className={`relative rounded-13xl bg-ui-primary-surface border-ui-btn-primary-stroke border-[2px] border-solid box-border w-full flex flex-row items-center justify-center p-1 gap-2 data-[property1='Variant2']:rounded-2xl data-[property1='Variant2']:flex-col ${className}`}
       data-property1={property1}
     >
       <Buttons

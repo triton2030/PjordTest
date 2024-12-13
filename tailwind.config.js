@@ -16,10 +16,6 @@ module.exports = {
       spacing: {
         iconsize: "16px",
         xxs: "2px",
-        boundvariablesdata: "20px",
-        py: "8px",
-        "space-x": "12px",
-        icon: "24px",
       },
       fontFamily: {
         "medium-base": "'Space Grotesk'",
@@ -35,11 +31,6 @@ module.exports = {
       sm: "14px",
       lg: "18px",
       inherit: "inherit",
-    },
-    screens: {
-      mq450: {
-        raw: "screen and (max-width: 450px)",
-      },
     },
   },
   corePlugins: {

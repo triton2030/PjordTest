@@ -15,15 +15,19 @@ const LocoTest: FunctionComponent = () => {
         size="base"
         beenhere="/beenhere.svg"
         checkCircle="/check-circle.svg"
+        iconLeft
+        iconRight
       />
       <LeftAlignBtn
         isSelected
         size="base"
         beenhere="/calculate.svg"
         checkCircle="/contract.svg"
+        iconLeft
+        iconRight
       />
-      <Chip accent size="Small" name1="chip" text />
-      <Chip accent={false} size="Big" name1="duds " text />
+      <Chip accent size="Small" name1="chip" text iconLeft iconRight />
+      <Chip accent={false} size="Big" name1="duds " text iconLeft iconRight />
     </div>
   );
 };

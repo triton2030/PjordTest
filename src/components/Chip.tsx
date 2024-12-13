@@ -5,6 +5,8 @@ export type ChipType = {
   className?: string;
   name1?: string;
   text?: boolean;
+  iconLeft?: boolean;
+  iconRight?: boolean;
 
   /** Variant props */
   accent?: boolean;
@@ -17,6 +19,8 @@ const Chip: FunctionComponent<ChipType> = ({
   size = "Small",
   name1 = "chip",
   text,
+  iconLeft,
+  iconRight,
 }) => {
   return (
     <div
@@ -34,6 +38,8 @@ const Chip: FunctionComponent<ChipType> = ({
           text={text}
           stringText="IconsText"
           editorChoice="/editor-choice.svg"
+          iconLeft={iconLeft}
+          iconRight={iconRight}
         />
       </div>
     </div>

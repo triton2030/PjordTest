@@ -5,6 +5,8 @@ export type IconsTextType = {
   text?: boolean;
   stringText?: string;
   editorChoice?: string;
+  iconLeft?: boolean;
+  iconRight?: boolean;
 
   /** Variant props */
   size?: "xs" | "base";
@@ -18,6 +20,8 @@ const IconsText: FunctionComponent<IconsTextType> = ({
   text = true,
   stringText = "IconsText",
   editorChoice,
+  iconLeft = true,
+  iconRight = true,
 }) => {
   return (
     <div
@@ -25,21 +29,25 @@ const IconsText: FunctionComponent<IconsTextType> = ({
       data-size={size}
       data-type={type}
     >
-      <img
-        className="w-iconsize relative h-iconsize"
-        alt=""
-        src="/baselogoinblue-2.svg"
-      />
+      {iconLeft && (
+        <img
+          className="w-iconsize relative h-iconsize"
+          alt=""
+          src="/baselogoinblue-2.svg"
+        />
+      )}
       {text && (
         <div className="iconstext relative leading-[16px] font-medium">
           {stringText}
         </div>
       )}
-      <img
-        className="editor-choice-icon w-4 relative h-4"
-        alt=""
-        src={editorChoice}
-      />
+      {iconRight && (
+        <img
+          className="editor-choice-icon w-4 relative h-4"
+          alt=""
+          src={editorChoice}
+        />
+      )}
     </div>
   );
 };
