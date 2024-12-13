@@ -7,6 +7,8 @@ export type ChipType = {
   text?: boolean;
   iconLeft?: boolean;
   iconRight?: boolean;
+  staking?: string;
+  iconLeftURL?: string;
 
   /** Variant props */
   accent?: boolean;
@@ -21,6 +23,8 @@ const Chip: FunctionComponent<ChipType> = ({
   text,
   iconLeft,
   iconRight,
+  staking,
+  iconLeftURL,
 }) => {
   return (
     <div
@@ -35,10 +39,12 @@ const Chip: FunctionComponent<ChipType> = ({
         <IconsText
           size="xs"
           type="Primary"
-          text={text}
+          showText={text}
           stringText="the mega"
           iconLeft={iconLeft}
           iconRight={iconRight}
+          iconRightURL={staking}
+          iconLeftURL={iconLeftURL}
         />
       </div>
     </div>

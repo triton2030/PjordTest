@@ -2,10 +2,12 @@ import { FunctionComponent } from "react";
 
 export type IconsTextType = {
   className?: string;
-  text?: boolean;
+  showText?: boolean;
   stringText?: string;
   iconLeft?: boolean;
   iconRight?: boolean;
+  iconRightURL?: string;
+  iconLeftURL?: string;
 
   /** Variant props */
   size?: "xs" | "base";
@@ -16,10 +18,12 @@ const IconsText: FunctionComponent<IconsTextType> = ({
   className = "",
   size = "xs",
   type = "Primary",
-  text = true,
+  showText = true,
   stringText = "IconsText",
   iconLeft = true,
   iconRight = true,
+  iconRightURL,
+  iconLeftURL = "/baselogoinblue-2.svg",
 }) => {
   return (
     <div
@@ -31,10 +35,10 @@ const IconsText: FunctionComponent<IconsTextType> = ({
         <img
           className="base-logo-in-blue-2-icon w-iconsize relative h-iconsize"
           alt=""
-          src="/baselogoinblue-2.svg"
+          src={iconLeftURL}
         />
       )}
-      {text && (
+      {showText && (
         <div className="iconstext relative leading-[1rem] font-medium">
           {stringText}
         </div>
@@ -43,7 +47,7 @@ const IconsText: FunctionComponent<IconsTextType> = ({
         <img
           className="staking-icon w-iconsize relative h-iconsize overflow-hidden shrink-0"
           alt=""
-          src="/staking.svg"
+          src={iconRightURL}
         />
       )}
     </div>

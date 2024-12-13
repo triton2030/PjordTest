@@ -5,6 +5,8 @@ export type LeftAlignBtnType = {
   iconLeft?: boolean;
   iconRight?: boolean;
   btnText2?: string;
+  iconLeftUrl?: string;
+  iconRightURL?: string;
 
   /** Variant props */
   isSelected?: boolean;
@@ -18,6 +20,8 @@ const LeftAlignBtn: FunctionComponent<LeftAlignBtnType> = ({
   iconLeft = true,
   iconRight = true,
   btnText2 = "Testting",
+  iconLeftUrl = "/staking.svg",
+  iconRightURL,
 }) => {
   return (
     <button
@@ -29,7 +33,7 @@ const LeftAlignBtn: FunctionComponent<LeftAlignBtnType> = ({
         <img
           className="beenhere-icon w-iconsize relative h-iconsize"
           alt=""
-          src="/beenhere.svg"
+          src={iconLeftUrl}
         />
       )}
       <div className="flex-1 flex flex-row items-center justify-center py-[0rem] px-[0.5rem]">
@@ -41,7 +45,7 @@ const LeftAlignBtn: FunctionComponent<LeftAlignBtnType> = ({
         <img
           className="check-circle-icon w-iconsize relative h-iconsize"
           alt=""
-          src="/check-circle.svg"
+          src={iconRightURL}
         />
       )}
     </button>
