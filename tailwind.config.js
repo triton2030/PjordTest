@@ -6,9 +6,9 @@ module.exports = {
       colors: {
         surface: "#140935",
         border: "#190f41",
+        surfaceinput: "rgba(0, 0, 0, 0.2)",
         text: "#d9ddff",
         surfaceaccent: "#3e29a2",
-        surfaceinput: "rgba(0, 0, 0, 0.2)",
       },
       spacing: {
         iconsize: "24px",
